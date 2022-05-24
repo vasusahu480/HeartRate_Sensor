@@ -20,3 +20,9 @@ The MAX30100 Oximeter Sensor works with the I2C bus. So, Interface the I2C pins 
 
 ![Interfacing-Max30100-pulse-oximeter-sensor-with-NodeMCU-ESP8266 (1)](https://user-images.githubusercontent.com/63048880/170036697-37c3a3ac-12ad-4ee9-a7b8-64c175863ab3.jpg)
 
+
+**Installing MAX30100_PulseOximeter Library**
+
+To install the library, First, download them and install them from the library manager. ELse, navigate to the Sketch > Include Library > Manage Libraries… Wait some time for Arduino IDE to update the list of installed libraries.
+
+Now in the search field search for “MAX30100” and install the library
