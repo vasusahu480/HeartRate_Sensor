@@ -3,11 +3,13 @@ In this project, we will monitor Heart Rate and oxygen saturation (Sp02) values 
 
 **Working of MAX30100 Pulse Oximeter Sensor **:
 
+![image](https://user-images.githubusercontent.com/63048880/170036228-92406ceb-843e-41fb-b2ae-a89745efd1ec.png)
+
 The sensor has two LEDs, one emitting red light, the other emitting infrared light. Infrared light is required for pulse rate. But, Both red light and infrared light are required for measuring Sp02 levels in the blood.
 
 When the heart pumps the blood, the oxygen level is increased because there is more blood. But, when the heart rests, there is a decrease in oxygenated blood. Hence, the pulse rate is determined by getting the time between the rise and fall of oxygenated blood.
 
-![image](https://user-images.githubusercontent.com/63048880/170036228-92406ceb-843e-41fb-b2ae-a89745efd1ec.png)
+![image](https://user-images.githubusercontent.com/63048880/170038094-1e421592-7cd8-406b-8e88-5385bddf697a.png)
 
 The oxygenated blood absorbs more infrared light and passes more red light. But, deoxygenated blood absorbs red light and passes more infrared light. Basically, the MAX30100 sensor reads the absorption levels for both light sources and stores them in a buffer that can be read via I2C pins.
 
