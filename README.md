@@ -26,3 +26,11 @@ The MAX30100 Oximeter Sensor works with the I2C bus. So, Interface the I2C pins 
 To install the library, First, download them and install them from the library manager. ELse, navigate to the Sketch > Include Library > Manage Libraries… Wait some time for Arduino IDE to update the list of installed libraries.
 
 Now in the search field search for “MAX30100” and install the library
+
+
+**Monitor Heart Rate and oxygen saturation (Sp02) values & Temperature using Arduino UNO**
+In /LCD_Test folder:
+-Monitoring Heart Rate and oxygen saturation (Sp02) values with MAX30100. 
+-Montitring Temprature with BMP sensor.
+-Controling the ventilator with L298N.
+-Using Ardunio UNO.
