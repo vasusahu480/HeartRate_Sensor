@@ -26,6 +26,15 @@ PulseOximeter pox;
 uint32_t tsLastReport = 0;
 
 void setup() {
+
+//  LCD setup
+  // initialize the LCD
+  lcd.begin();
+
+  // Turn on the blacklight and print a message.
+  lcd.backlight();
+  lcd.print("Welcome to Newkilo Project!");
+  delay(3000);
 //  oximeter steup
   Serial.begin(9600);
   pinMode(16, OUTPUT);
@@ -52,6 +61,7 @@ void setup() {
 //  motor pinModes
   pinMode(enA, OUTPUT);
   pinMode(in1, OUTPUT);
+  digitalWrite(in1, LOW);
   pinMode(A0, INPUT);
   Serial.begin(9600);
 }
@@ -61,12 +71,11 @@ void loop() {
   int potValue = analogRead(A0); // Read potentiometer value
   int pwmOutput = map(potValue, 0, 1023, 0 , 255); // Map the potentiometer value from 0 to 255
   analogWrite(enA, pwmOutput); // Send PWM signal to L298N Enable pin
-  Serial.print("pwmOutput: ");
-  Serial.print(pwmOutput);
-  Serial.println("potValue: ");
-  Serial.print(potValue);
-  digitalWrite(in1, HIGH);
-  delay(20);
+//  Serial.print("pwmOutput: ");
+//  Serial.print(pwmOutput);
+//  Serial.println("potValue: ");
+//  Serial.print(potValue);
+//  delay(20);
 
   //  oximeter and BMP sensor with LCD
   pox.update();
@@ -102,6 +111,14 @@ void loop() {
       lcd.print("O2: ");
       lcd.print(SpO2);
       lcd.print("%");
+
+      //
+      if(SpO2<=95 && SpO2 >=50){
+          digitalWrite(in1, HIGH);
+        }      
+      else{
+          digitalWrite(in1, LOW);
+        }
 
     Serial.println("*********************************");
     Serial.println();
