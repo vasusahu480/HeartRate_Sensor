@@ -3,6 +3,7 @@
 
 #include <Wire.h>
 #include "MAX30100_PulseOximeter.h"
+// library MAX30100_milan 1.3.0 gabriel
 #include <LiquidCrystal_I2C.h>
 #include <Adafruit_BMP085.h>
 #define seaLevelPressure_hPa 1013.25
